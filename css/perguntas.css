@@ -1,0 +1,222 @@
+.carta-ativa#carta1 .flip-carta-frente {
+    box-sizing: border-box;
+    border: 0.5em solid #FA2A38;
+    color: white;
+}
+
+.carta-ativa#carta1 .flip-carta-costa {
+    background-color: #FA2A38;
+}
+
+
+.carta-ativa#carta2 .flip-carta-frente {
+    box-sizing: border-box;
+    border: 0.5em solid #006FC2;
+    color: white;
+}
+
+.carta-ativa#carta2 .flip-carta-costa {
+    background-color: #006FC2;
+}
+
+
+.carta-ativa#carta3 .flip-carta-frente {
+    box-sizing: border-box;
+    border: 0.5em solid #67D014;
+    color: white;
+}
+
+.carta-ativa#carta3 .flip-carta-costa {
+    background-color: #67D014;
+}
+
+
+.carta-ativa#carta4 .flip-carta-frente {
+    box-sizing: border-box;
+    border: 0.5em solid #FFD701;
+    color: white;
+}
+
+.carta-ativa#carta4 .flip-carta-costa {
+    background-color: #FFD701;
+}
+
+/* PERGUNTAS COMECA AQUI */
+
+.perguntaCaixa {
+    border-radius: 2em;
+    display: none;
+    /* Oculto por padrão */
+    position: fixed;
+    /* Fica fixo na tela */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centraliza */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.801);
+    backdrop-filter: blur(1em);
+    padding: 200px;
+    border: 3px solid rgb(70, 70, 70);
+    z-index: 1000;
+    /* Fica acima de outros elementos */
+    color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.288);
+
+}
+
+/* Mostra o pop-up quando é o alvo (:target) */
+.perguntaCaixa:target {
+    display: block;
+}
+
+.perguntaCaixa::before {
+    translate: -50% -50%;
+    border-radius: 2em;
+    content: '';
+    background: rgba(54, 50, 50, 0.493);
+    height: 1000%;
+    width: 1000%;
+    position: absolute;
+    z-index: -1;
+    backdrop-filter: blur(5px);
+}
+
+
+.botao1{
+    padding:10px;
+    border: 2px solid white;
+    border-radius: 1em;
+    font-size: 30px;
+    margin-top: -15px;
+    color:#ffffff;
+    background-color: #ffffff00;
+    transition: border-radius 900ms, background-color 500ms, color 900ms;
+    
+
+}
+
+.botao1:hover{
+    color: #FA2A38;
+    transition: 200ms;
+    border-radius: 0.5em;
+    background-color: #ffffff;
+
+}
+
+
+.botao2{
+    padding:10px;
+    border: 2px solid white;
+    border-radius: 1em;
+    font-size: 30px;
+    margin-top: -15px;
+    color:#ffffff;
+    background-color: #ffffff00;
+    transition: border-radius 900ms, background-color 500ms, color 900ms;
+    
+
+}
+
+.botao2:hover{
+    color: #006FC2;
+    transition: 200ms;
+    border-radius: 0.5em;
+    background-color: #ffffff;
+
+}
+
+
+
+.botao3{
+    padding:10px;
+    border: 2px solid white;
+    border-radius: 1em;
+    font-size: 30px;
+    margin-top: -15px;
+    color:#ffffff;
+    background-color: #ffffff00;
+    transition: border-radius 900ms, background-color 500ms, color 900ms;
+    
+
+}
+
+.botao3:hover{
+    color: #67D014;
+    transition: 200ms;
+    border-radius: 0.5em;
+    background-color: #ffffff;
+
+}
+
+
+
+
+.botao4{
+    padding:10px;
+    border: 2px solid white;
+    border-radius: 1em;
+    font-size: 30px;
+    margin-top: -15px;
+    color:#ffffff;
+    background-color: #ffffff00;
+    transition: border-radius 900ms, background-color 500ms, color 900ms;
+    
+
+}
+
+.botao4:hover{
+    color: #FFD701;
+    transition: 200ms;
+    border-radius: 0.5em;
+    background-color: #ffffff;
+
+}
+
+.proibido{
+    pointer-events: none;
+    font-size: 60px;
+}
+
+.verdadeiro{
+    margin: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 5%;
+    width: 200px;
+    border-radius: 0.5em;
+    cursor:pointer;
+    border: 2px solid #67D014;
+    background-color: #ffffff00;
+    color: #67D014;
+    transition: 300ms;
+}
+
+.verdadeiro:hover{
+    transform: scale(1.05);
+    border: 2px solid #67D014;
+    background-color: #67D014;
+    color: #ffffff;
+    box-shadow: 0px 0px 19px #67D014;
+}
+
+.falso{
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 5%;
+    width: 200px;
+    border-radius: 0.5em;
+    cursor:pointer;
+    border: 2px solid #FA2A38;
+    background-color: #ffffff00;
+    color: #FA2A38;
+    transition: 300ms;
+}
+
+.falso:hover{
+    transform: scale(1.05);
+    border: 2px solid #FA2A38;
+    background-color: #FA2A38;
+    color: #ffffff;
+    box-shadow: 0px 0px 19px #FA2A38;
+}
