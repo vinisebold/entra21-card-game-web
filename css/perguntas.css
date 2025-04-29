@@ -46,26 +46,22 @@
 .perguntaCaixa {
     border-radius: 2em;
     display: none;
-    /* Oculto por padrão */
     position: fixed;
-    /* Fica fixo na tela */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* Centraliza */
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.801);
+    background-color: rgba(0, 0, 0, 0.727);
     backdrop-filter: blur(1em);
-    padding: 200px;
+    padding: 100px;
     border: 3px solid rgb(70, 70, 70);
     z-index: 1000;
-    /* Fica acima de outros elementos */
     color: rgb(255, 255, 255);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.288);
 
 }
 
-/* Mostra o pop-up quando é o alvo (:target) */
+/* mostra o pop-up quando é o alvo (:target) */
 .perguntaCaixa:target {
     display: block;
 }
