@@ -1,0 +1,180 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 3em;
+    height: 100%;
+}
+
+.background {
+    background-image: url(/img/background.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center bottom;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.lado {
+    margin-top: 40vh;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.flip-carta {
+    margin: 2em;
+    background-color: transparent;
+    width: 200px;
+    height: 300px;
+    perspective: 2000px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.flip-carta-dentro {
+    border-radius: 2em;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 40px 30px 0 rgba(95, 95, 95, 0.397);
+}
+
+.flip-carta:hover .flip-carta-dentro {
+    transform: rotateY(180deg);
+}
+
+/* Efeito para cartas usadas */
+.usado {
+    opacity: 0.5;
+    pointer-events: none;
+    /* Desativa interações */
+}
+
+.usado-cinza .flip-carta-frente,
+.usado-cinza .flip-carta-costa {
+    filter: grayscale(100%);
+    background-color: #cacaca !important;
+    color: #666 !important;
+    transition: all 0.3s ease;
+}
+
+.flip-carta-frente,
+.flip-carta-costa {
+    border-radius: 2em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: border 0.3s ease;
+    background-color: #000000;
+}
+
+.flip-carta-frente {
+    font-weight: lighter;
+    background-color: #000000;
+    color: black;
+}
+
+.flip-carta-costa {
+    background-color: #ffffff;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Botões */
+.botao-container {
+    text-align: center;
+    font-size: 16px;
+    display: block;
+
+}
+
+#botao-resetar {
+    border: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #00000000;
+    color: rgb(94, 94, 94);
+    text-decoration: underline;
+}
+
+#botao-resetar:hover {
+    transform: scale(1.05);
+}
+
+.botao-aleatorio {
+    margin: 0 auto;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 1000px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.1s ease, color 0.3s ease;
+    background-color: #ececec;
+    color: rgb(0, 0, 0);
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-aleatorio::after {
+    content: '';
+    position: absolute;
+    height: 110%;
+    width: 103%;
+    border-radius: 1000px;
+    background: rgb(103, 208, 20);
+    background: linear-gradient(112deg, rgba(103, 208, 20, 1) 0%, rgba(0, 111, 194, 1) 29%, rgba(250, 42, 56, 1) 73%, rgba(255, 215, 1, 1) 100%);
+    z-index: -1;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.8;
+}
+
+.botao-aleatorio:hover {
+    z-index: 0;
+    transform: scale(1.05);
+    box-shadow: -30px -8px 50px #6fff00, 30px -10px 50px #006FC2, 20px 15px 30px #ff0011;
+    color: #ffffff;
+    font-weight: bolder;
+
+}
+
+
+.botao-aleatorio:hover::after {
+    opacity: 1;
+}
+
+
+/* efeito destaque */
+.destaque {
+    transform: scale(1.1);
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    rotate: -55deg;
+    width: 70%;
+    height: 33%;
+    margin-top: 45%;
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+@media (max-width: 1160px) {
+
+    .lado {
+        margin-top: 0em;
+    }
+
+}
